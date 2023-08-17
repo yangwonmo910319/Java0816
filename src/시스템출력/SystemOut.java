@@ -3,7 +3,7 @@ package 시스템출력;
 public class SystemOut {
     public static void main(String[] args) {
         String A = " 서울시";
-        String B= " 새대문구";
+        String B= " 은평구";
         int C=11;
         int D=22;
         int E=33;
