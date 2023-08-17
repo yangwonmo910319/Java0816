@@ -22,6 +22,8 @@ public class SystemOut {
         System.out.println("평균"+(C+D));
         System.out.println("평균"+((double)(C+D))/4);
         System.out.println("평균"+((double)(C+D)/4));
+        System.out.println("평균"+((double)(C+D)/4));
+        System.out.println("평균"+((double)(C+D)/4));
 
 
 
