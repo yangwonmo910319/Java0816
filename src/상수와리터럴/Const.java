@@ -10,6 +10,8 @@ public class Const {
 
 
             String ab = sc.next();
+        System.out.print("테스트테스트");
+        System.out.print(ab);
         System.out.print(ab);
         System.out.print(ab);
         System.out.print(ab);
