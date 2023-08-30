@@ -1,13 +1,13 @@
 package 리스트;
 
-public class MenuInfo {
+public class MenuInfo1 {
     String name = "";
     int price;
     String category = "";
     String desc = "";
     boolean isTax;
 
-    MenuInfo(String name, int price, boolean isTax) {
+    MenuInfo1(String name, int price, boolean isTax) {
         this.name = name;
         this.price = price;
         this.isTax = isTax;
