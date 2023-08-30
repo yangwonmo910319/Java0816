@@ -10,7 +10,7 @@ public class Vector1 {
         List<NameCard> list = new Vector<>();
         list.add(new NameCard("우영우", "yyy@gmail.com", "010-1234-5678", "변호사"));
         list.add(new NameCard("동그라마", "ddd@gmail.com", "010-1234-5678", "무직"));
-        list.add(new NameCard("ljh@gmail.com", "010-1234-5678", "회사원"));
+        list.add(new NameCard("ljh@g111mail.com", "010-1234-5678", "회사원"));
 
         for(NameCard e : list) {
             System.out.println("이름 : " + e.name);
