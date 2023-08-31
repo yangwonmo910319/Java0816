@@ -9,11 +9,21 @@ import java.util.TreeSet;
 public class StudentSortEx {
     public static void main(String[] args) {
         TreeSet<Student> students = new TreeSet<Student>();
-        students.add(new Student("11", 40));
+/*        students.add(new Student("11", 40));
         students.add(new Student("1111", 20));
         students.add(new Student("11", 70));
         students.add(new Student("11", 60));
-        students.add(new Student("111", 50));
+        students.add(new Student("111", 50));*/
+
+
+
+        students.add(new Student(22, 70));
+        students.add(new Student(22, 60));
+        students.add(new Student(22, 50));
+        students.add(new Student(11, 40));
+        students.add(new Student(11, 20));
+
+
 /*        Iterator<Student> iterator = students.iterator();
 
         while(iterator.hasNext()) {

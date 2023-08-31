@@ -1,10 +1,10 @@
 package 학생성적정렬;
 
 public class Student implements  Comparable<Student> {
-   String name;
+   int name;
   int score;
 
-    public Student(String name, int score) {
+    public Student(int name, int score) {
         this.name = name;
         this.score = score;
     }
@@ -23,11 +23,11 @@ public class Student implements  Comparable<Student> {
         }
 */
 
-        if(this.name.length()>o.name.length()){//이름 길이
+        if(this.name>o.name){//이름 길이
 
             return 1;
         }
-        if(this.name.length()==o.name.length()){
+        if(this.name==o.name){
 
             if(this.score>o.score){
                 return 1;//점수 뒤에 가 높으면 바꿈
