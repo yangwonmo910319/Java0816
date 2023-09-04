@@ -25,10 +25,11 @@ customerList.stream()
         .filter(c->c.getAge() >=20)
         .map(c->c.getName())
         .sorted()
-        .forEach(c-> System.out.println(  c ));
+        ;
 
  System.out.println( );
-
+int x=(int)(Math.random()*20);
+ System.out.println("xxxxx"+x   );
     }
 }
 class TravelCustomer{
