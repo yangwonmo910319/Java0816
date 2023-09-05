@@ -1,16 +1,17 @@
-package exex;
+package 카페;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
-public class Menu {
+public class Menu implements Serializable {
     static Map<String, MenuInfo> map = new HashMap<>();
 
     //                 키 ,   객체 값(클라스 명)
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
         makeMenu();
         selectMenu();
+
+
     }
 
     static void makeMenu() {
@@ -20,7 +21,12 @@ public class Menu {
 
     }
 
-    static void selectMenu() {
+    static void SetMenu() {
+
+
+    }
+
+    static void selectMenu() throws IOException, ClassNotFoundException {
         Scanner sc = new Scanner(System.in);
         String Key = "";
         while (true) {
@@ -33,10 +39,10 @@ public class Menu {
                 case 1: {
                     System.out.println("=".repeat(10) + "메뉴 리스트" + "=".repeat(10));
                     for (String e : map.keySet()) {
-                        System.out.println("메뉴 : " + map.get(e).name);
-                        System.out.println("가격 : " + map.get(e).price);
-                        System.out.println("분류 : " + map.get(e).category);
-                        System.out.println("설명 : " + map.get(e).descrition);
+                        System.out.println("메뉴 : " + map.get(e).getName());
+                        System.out.println("가격 : " + map.get(e).getPrice());
+                        System.out.println("분류 : " + map.get(e).getCategory());
+                        System.out.println("설명 : " + map.get(e).getDescrition());
                         System.out.println("=".repeat(25));
 
                     }
@@ -46,10 +52,10 @@ public class Menu {
                     System.out.println("조회할 매뉴를 입력하세요");
                     key = sc.next();
                     if (map.containsKey(key)) {
-                        System.out.println("메뉴 : " + map.get(key).name);
-                        System.out.println("가격 : " + map.get(key).price);
-                        System.out.println("분류 : " + map.get(key).category);
-                        System.out.println("설명 : " + map.get(key).descrition);
+                        System.out.println("메뉴 : " + map.get(key).getName());
+                        System.out.println("가격 : " + map.get(key).getPrice());
+                        System.out.println("분류 : " + map.get(key).getCategory());
+                        System.out.println("설명 : " + map.get(key).getDescrition());
                     } else {
                         System.out.println("해당 메뉴가 존재하지 않습니다.");
                     }
@@ -88,7 +94,7 @@ public class Menu {
                     key = sc.next();
                     if (map.containsKey(key)) {
                         System.out.println("수정 할 메뉴를 입력하세요.");
-                         String key2 = sc.next();
+                        String key2 = sc.next();
                         System.out.println("가격 입력 :");
                         int price = sc.nextInt();
                         System.out.println("분류 입력 :");
@@ -99,9 +105,18 @@ public class Menu {
                         map.replace(key, new MenuInfo(key2, price, category, descrition));
                     }
                     System.out.println("수정 할 메뉴가 없습니다.");
+
                     break;
+
                 case 6:
                     System.out.println("종료");
+                    FileOutputStream fos = new FileOutputStream("src/커피메뉴만들기/coffee.bin");
+                    ObjectOutputStream oos = new ObjectOutputStream(fos);
+                    oos.writeObject(map); // 객체 출력 스트림을 이용해서 list 출력
+                    oos.flush();
+                    oos.close();
+                    fos.close();
+
                     return;
                 //System.exit(0); 강제종료
 
@@ -112,6 +127,6 @@ public class Menu {
         }
 
     }
-
-
 }
+
+

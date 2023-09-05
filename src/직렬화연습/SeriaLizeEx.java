@@ -28,7 +28,7 @@ List<Board> list  = readList();
         ObjectOutputStream oos = null;
 
         try {
-            fos = new FileOutputStream("board.db");
+            fos = new FileOutputStream("board.xxb");
             oos = new ObjectOutputStream(fos);
             oos.writeObject(list);
             oos.flush();

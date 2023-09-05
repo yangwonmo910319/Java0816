@@ -7,7 +7,7 @@ import java.io.IOException;
 public class FileCopyEx {
     public static void main(String[] args) throws IOException {
         String originFileName="src/파일복사하기/이미지.jpg";
-        String targetFileName="d:/tmp/bear.jpg";
+        String targetFileName="d:tmp/bear.jpg";
 
         FileInputStream fis =new FileInputStream(originFileName);
         FileOutputStream fos = new FileOutputStream(targetFileName);
